@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <h1>Restaurants</h1>
+    <%= link_to new_restaurant_path do %>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    <% end %>
+  </div>
+    <div class="card"></div>
+    <% @restaurants.each do |restaurant| %>
+      <div class="card m-3 p-3">
+        <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+        <p><%= restaurant.address %></p>
+        <p><%= restaurant.phone_number %></p>
+        <p><%= restaurant.category %></p>
+      </div>
+    <% end %>
+</div>
+
+
+
+<%#= link_to "text", prefix_path(args)  %>
